@@ -130,16 +130,14 @@ app.get('/options/:type',(req,res)=>{
                 if(err){
                     res.send(err)
                 }else{
-                    console.log(user)
                     res.redirect('/home')
                 }
             })
         }else if(req.params.type == 'eraseNotes'){
             User.findById(req.user.id,(err,user)=>{
                 if(!err){
-                    console.log(`Before erasing : ${user}`);
+                  
                     user.notes = []
-                    console.log(`After erasing : ${user}`);
                     user.save()
                     res.redirect('/home')
                 }

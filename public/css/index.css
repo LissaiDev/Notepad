@@ -1,0 +1,27 @@
+/*Testes*/
+.borda{
+	border: 1px solid red;
+}
+
+::placeholder{
+	text-align: center;
+}
+
+/*Botao*/
+button.navbar-toggler, button.navbar-toggler:active, button.navbar-toggler:focus{
+	border: none;
+	box-shadow: none;
+}
+
+input-group-text{
+	background-color: rbga(0,0,0,0);
+}
+/*Logotipo*/
+#logotipo{
+	width: 5em;
+}
+
+/*Links*/
+a{
+	text-decoration: none;
+}

@@ -1,0 +1,28 @@
+<%- include ('partials/header') %>
+<%- include ('partials/navigation') %>
+
+        <div class="container my-4 p-4">
+            <form action="/updateNote2" method="post">
+                <div class="mb-2">
+                    <label for="title" class="form-label">
+                        Título:
+                    </label>
+                    <input type="text" class="form-control"  value="<%=valueOfTitle%>" required name="title" id="title">
+                </div>
+                <div class="mb-1">
+                    <label for="note" class="form-label">
+                        Nota:
+                    </label>
+                    <textarea name="content" id="content" required class="form-control"><%=valueOfContent%></textarea>
+                </div>
+                <input type="hidden" value="<%=id%>" name="id">
+                <button type="submit" class="btn btn-primary bg-primary">
+                    Guardar
+                </button>
+            </form>
+        </div>
+
+
+
+
+        <%-include ('partials/footer') %>
